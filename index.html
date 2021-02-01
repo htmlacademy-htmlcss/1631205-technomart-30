@@ -14,7 +14,7 @@
 
     <header class="header">
       <div class="header-top">
-        <a class="logo header__logo" href="">ТЕХНОМАРТ</a>
+        <a class="logo header__logo" href=""><img src="img/logo.svg" alt="ТЕХНОМАРТ"></a>
         <form class="header-form" action="#"><input type="text" placeholder="Поиск:"></form>
         <a class="header__bookmarks" href="">Закладки: 0</a>
         <a class="header__cart" href="">Корзина: 0</a>
@@ -51,7 +51,7 @@
     <main class="wrapper">
 
       <section class="advantages">
-        <h2 class="advantages__title">Преимущества</h2>
+        <h2 class="advantages__title" hidden>Преимущества</h2>
         <ul class="advantages-list">
           <li class="advantages-item">
             <div>
@@ -287,47 +287,51 @@
     </main>
 
     <footer class="footer">
-      <a class="logo footer__logo" href="">ТЕХНОМАРТ</a>
-      <p class="footer__info">
-        г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8 <br>
-        <a href="tel:+78125550555">+7 (812) 555-05-55</a>
-      </p>
-      <ul class="footer-list">
-        <li class="footer-list__item"><a href="">Компания</a></li>
-        <li class="footer-list__item"><a href="">Новости</a></li>
-        <li class="footer-list__item"><a href="">Каталог</a></li>
-        <li class="footer-list__item"><a href="">Доставка</a></li>
-        <li class="footer-list__item"><a href="">Контакты</a></li>
-      </ul>
-      <ul class="footer-list">
-        <li class="footer-list__item"><a href="">Материалы</a></li>
-        <li class="footer-list__item"><a href="">Техника</a></li>
-        <li class="footer-list__item"><a href="">Инструмент</a></li>
-        <li class="footer-list__item"><a href="">Спецпредложения</a></li>
-      </ul>
-      <p class="footer__copyright">
-        © 2010–2019 Компания «Техномарт» <br>
-        Все права защищены
-      </p>
-      <ul class="footer-socials">
-        <li class="footer-socials__item">
-          <a href=""><img src="img/icons/vk.svg" width="26" height="15" alt="Вконтакте"></a>
-        </li>
-        <li class="footer-socials__item">
-          <a href=""><img src="img/icons/fb.svg" width="12" height="22" alt="Фейсбук"></a>
-        </li>
-        <li class="footer-socials__item">
-          <a href=""><img src="img/icons/insta.svg" width="21" height="21" alt="Инстаграм"></a>
-        </li>
-      </ul>
-      <p class="footer__feedback">
-        Обратная связь:
-        <a href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a>
-      </p>
-      <p class="footer__developed">
-        Разработано —
-        <a href="https://htmlacademy.ru/intensive/htmlcss">htmlacademy.ru</a>
-      </p>
+      <div>
+        <a class="logo footer__logo" href=""><img src="img/logo.svg" alt="ТЕХНОМАРТ"></a>
+        <p class="footer__info">
+          г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8 <br>
+          <a href="tel:+78125550555">+7 (812) 555-05-55</a>
+        </p>
+        <ul class="footer-list">
+          <li class="footer-list__item"><a href="">Компания</a></li>
+          <li class="footer-list__item"><a href="">Новости</a></li>
+          <li class="footer-list__item"><a href="">Каталог</a></li>
+          <li class="footer-list__item"><a href="">Доставка</a></li>
+          <li class="footer-list__item"><a href="">Контакты</a></li>
+        </ul>
+        <ul class="footer-list">
+          <li class="footer-list__item"><a href="">Материалы</a></li>
+          <li class="footer-list__item"><a href="">Техника</a></li>
+          <li class="footer-list__item"><a href="">Инструмент</a></li>
+          <li class="footer-list__item"><a href="">Спецпредложения</a></li>
+        </ul>
+      </div>
+      <div>
+        <p class="footer__copyright">
+          © 2010–2019 Компания «Техномарт» <br>
+          Все права защищены
+        </p>
+        <ul class="footer-socials">
+          <li class="footer-socials__item">
+            <a href=""><img src="img/icons/vk.svg" width="26" height="15" alt="Вконтакте"></a>
+          </li>
+          <li class="footer-socials__item">
+            <a href=""><img src="img/icons/fb.svg" width="12" height="22" alt="Фейсбук"></a>
+          </li>
+          <li class="footer-socials__item">
+            <a href=""><img src="img/icons/insta.svg" width="21" height="21" alt="Инстаграм"></a>
+          </li>
+        </ul>
+        <p class="footer__feedback">
+          Обратная связь:
+          <a href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a>
+        </p>
+        <p class="footer__developed">
+          Разработано —
+          <a href="https://htmlacademy.ru/intensive/htmlcss">htmlacademy.ru</a>
+        </p>
+      </div>
     </footer>
 
     <section class="modal modal-letter">
@@ -345,7 +349,7 @@
           <label for="user-text">Текст письма:</label>
           <textarea class="letter-form__textarea" name="user-text" id="user-text" placeholder="В свободной форме"></textarea>
         </p>
-        <button type="submit" class="letter-form__button">Отправить</button>
+        <div class="letter-form__button"><button class="link" type="submit">Отправить</button></div>
       </form>
     </section>
 
