@@ -1,0 +1,491 @@
+/* Fonts */
+
+@font-face {
+  font-family: 'Cuprum';
+  src: url("../fonts/cuprum.woff") format("woff");
+  src: url("../fonts/cuprum.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Cuprum';
+  src: url("../fonts/cuprumbold.woff") format("woff");
+  src: url("../fonts/cuprumbold.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Cuprum';
+  src: url("../fonts/cuprumbolditalic.woff") format("woff");
+  src: url("../fonts/cuprumbolditalic.woff2") format("woff2");
+  font-weight: 700;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Cuprum';
+  src: url("../fonts/cuprumitalic.woff") format("woff");
+  src: url("../fonts/cuprumitalic.woff2") format("woff2");
+  font-weight: 400;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'PT Sans';
+  src: url("../fonts/ptsans.woff") format("woff");
+  src: url("../fonts/ptsans.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'PT Sans';
+  src: url("../fonts/ptsansbold.woff") format("woff");
+  src: url("../fonts/ptsansbold.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal;
+}
+
+/* Variables */
+
+:root {
+  --basic-black: #000000;
+  --basic-white: #ffffff;
+  --basic-red: #EE3643;
+  --basic-beige: #F9F5F0;
+  --basic-blue-dark: #293449;
+  --basic-blue-navy: #32425C;
+  --basic-yellow: #FFD180;
+  --basic-grey: #3D546F;
+  --basic-green: #63A63E;
+  --basic-background: #F1F5F7;
+
+  --success: #5FBB2D;
+}
+
+/* Global */
+
+body {
+  font-family: "Cuprum", Arial, sans-serif;
+  font-size: 18px;
+  line-height: 24px;
+  font-weight: 400;
+  color: var(--basic-black);
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.link {
+  font-size: 14px;
+  line-height: 18px;
+  color: var(--basic-white);
+  background-color: var(--basic-red);
+}
+
+.popular__title {
+  color: var(--basic-blue-navy);
+  text-transform: uppercase;
+  font-size: 30px;
+  line-height: 30px;
+}
+
+.buy {
+  font-size: 14px;
+  line-height: 18px;
+  color: var(--basic-white);
+  background-color: var(--basic-green);
+  box-shadow: inset 0px -3px 0px #367315;
+  border-radius: 2px;
+}
+
+.bookmarks {
+  font-size: 14px;
+  line-height: 28px;
+  color: var(--basic-blue-navy);
+  border: 3px solid var(--basic-green);
+  border-radius: 2px;
+}
+
+.title {
+  font-size: 30px;
+  line-height: 30px;
+  text-transform: uppercase;
+}
+
+.text {
+  font-family: 'PT Sans';
+  font-size: 13px;
+  line-height: 24px;
+}
+
+.logo {
+  background-color: var(--basic-red);
+  box-shadow: inset 0px -5px 0px rgba(0, 0, 0, 0.24);
+}
+
+/* Header */
+
+.header {
+  background-color: #F3F7F9;
+}
+
+.header-top {
+  background-color: var(--basic-blue-dark);
+  color: var(--basic-white);
+}
+
+.header-top a {
+  color: inherit;
+}
+
+.header-form input {
+  background-color: transparent;
+  border: none;
+  color: inherit;
+}
+
+.header-form input::placeholder {
+  color: inherit;
+}
+
+.header__checkout {
+  background-color: var(--basic-green);
+}
+
+.header__title {
+  font-size: 16px;
+  line-height: 23px;
+  color: var(--basic-red);
+  font-style: italic;
+}
+
+.header__phone {
+  border: 3px solid #FFFFFF;
+  font-size: 21px;
+  line-height: 30px;
+  font-weight: 700;
+  color: var(--basic-red);
+}
+
+.header__address {
+  font-size: 14px;
+  line-height: 24px;
+  color: var(--basic-blue-navy);
+}
+
+.header__login {
+  background-color: var(--basic-white);
+  font-size: 21px;
+  color: var(--basic-black);
+}
+
+.header__registration {
+  background-color: var(--basic-white);
+  font-size: 21px;
+  color: var(--basic-black);
+}
+
+.header-nav {
+  background-color: var(--basic-blue-navy);
+}
+
+.header-list {
+  list-style: none;
+}
+
+.header-list__item a {
+  color: var(--basic-white);
+}
+
+/* Advantages */
+
+.advantages {
+  color: var(--basic-white);
+}
+
+.advantages-list {
+  list-style: none;
+}
+
+.advantages-item:nth-child(1) {
+  background-color: #FFBF47;
+}
+.advantages-item:nth-child(2) {
+  background-color: #3BBCE3;
+}
+.advantages-item:nth-child(3) {
+  background-color: #DC91D8;
+}
+.advantages-item:nth-child(4) {
+  background-color: #8ED78F;
+}
+.advantages-item:nth-child(5) {
+  background-color: #FFC047;
+}
+
+.advantages-item__title {
+  font-size: 24px;
+  line-height: 30px;
+}
+
+.advantages-item__link {
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+.advantages-item__label {
+  font-size: 14px;
+  line-height: 28px;
+  color: var(--basic-white);
+  background-color: var(--basic-red);
+}
+
+.advantages-slide {
+  background-repeat: no-repeat;
+  background-color: rgba(0, 0, 0, 0.25);
+}
+
+.advantages-slide:nth-child(1) {
+  background-image: url(../img/advantages/slider/1.jpg);
+}
+
+.advantages-slide:nth-child(2) {
+  background-image: url(../img/advantages/slider/2.jpg);
+}
+
+.advantages-slide__title {
+  font-size: 36px;
+  line-height: 36px;
+  color: var(--basic-white);
+}
+
+.advantages-slide__link {
+  font-size: 14px;
+  line-height: 18px;
+}
+
+/* Goods */
+
+.goods-list {
+  list-style: none;
+}
+
+.goods-item {
+  border: 1px solid #EAEAEA;
+  background-color: var(--basic-white);
+}
+
+.goods-item__title {
+  font-size: 18px;
+  line-height: 20px;
+  font-weight: 700;
+}
+
+.goods-item__price {
+  font-family: 'PT Sans';
+  font-size: 17px;
+  line-height: 18px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.goods-item__price_old {
+  color: #A9A9A9;
+}
+
+.goods-item__price_new {
+  color: var(--basic-white);
+  background-color: var(--basic-red);
+}
+
+/* Manufacturers */
+
+.manufacturers-list {
+  list-style: none;
+}
+
+.manufacturers-item {
+  border: 1px solid #EAEAEA;
+  background-color: var(--basic-white);
+}
+
+/* Services */
+
+.services {
+  background-color: var(--basic-background);
+}
+
+.tabs-caption {
+  list-style: none;
+}
+
+.tabs-caption__item {
+  background-color: var(--basic-blue-navy);
+}
+
+.tabs-caption__item_active {
+  background-color: var(--basic-white);
+}
+
+.tabs-caption__item a {
+  font-size: 21px;
+  line-height: 30px;
+  color: var(--basic-white);
+  font-weight: 700;
+}
+
+.tabs-caption__item_active a {
+  color: var(--basic-blue-navy);
+}
+
+.tabs-content {
+  list-style: none;
+}
+
+.tabs-content__title {
+  font-size: 30px;
+  line-height: 30px;
+  color: var(--basic-blue-navy);
+  text-transform: uppercase;
+}
+
+.tabs-content__text {
+  font-family: 'PT Sans';
+  font-size: 13px;
+  line-height: 24px;
+}
+
+.tabs-content__item {
+  background-repeat: no-repeat;
+}
+
+.tabs-content__item:nth-child(1) {
+  background-image: url(../img/services/delivery.png);
+}
+
+.tabs-content__item:nth-child(2) {
+  background-image: url(../img/services/guarantee.png);
+}
+
+.tabs-content__item:nth-child(3) {
+  background-image: url(../img/services/credit.png);
+}
+
+/* About */
+
+.about-list {
+  list-style: none;
+}
+
+/* Footer */
+
+.footer div:nth-child(1) {
+  background-color: var(--basic-blue-navy);
+}
+
+.footer div:nth-child(2) {
+  background-color: var(--basic-blue-dark);
+}
+
+.footer__info {
+  color: #F3F7F9;
+}
+
+.footer__info a {
+  color: inherit;
+}
+
+.footer-list {
+  list-style: none;
+}
+
+.footer-list:nth-of-type(1) .footer-list__item a {
+  color: var(--basic-background);
+}
+
+.footer-list:nth-of-type(2) .footer-list__item a {
+  color: var(--basic-yellow);
+}
+
+.footer__copyright {
+  font-size: 16px;
+  line-height: 18px;
+  color: var(--basic-white);
+}
+
+.footer-socials {
+  list-style: none;
+}
+
+.footer-socials__item {
+  background: linear-gradient(0deg, #212A3A, #212A3A);
+}
+
+.footer__feedback {
+  font-size: 16px;
+  line-height: 18px;
+  color: var(--basic-white);
+}
+
+.footer__feedback a {
+  color: var(--basic-yellow);
+}
+
+.footer__developed {
+  font-size: 16px;
+  line-height: 18px;
+  color: var(--basic-white);
+}
+
+.footer__developed a {
+  color: var(--basic-yellow);
+}
+
+/* Modal */
+
+.modal-close {
+  background: none;
+  border: none;
+}
+
+/* Modal letter */
+
+.letter-form__input {
+  font-family: 'PT Sans';
+  font-size: 13px;
+  line-height: 24px;
+  border: 2px solid #C5C5C5;
+  border-radius: 2px;
+}
+
+.letter-form__input::placeholder {
+  color: #A9A9A9;
+}
+
+.letter-form__textarea {
+  font-family: 'PT Sans';
+  font-size: 13px;
+  line-height: 24px;
+  border: 2px solid #C5C5C5;
+  border-radius: 2px;
+}
+
+.letter-form__textarea::placeholder {
+  color: #A9A9A9;
+}
+
+.letter-form__button {
+  background-color: #F4F4F4;
+}
+
+.letter-form__button button {
+  border: none;
+}
