@@ -178,6 +178,14 @@ img {
   color: inherit;
 }
 
+.header__cart {
+  background-color: transparent;
+}
+
+.header__cart--active {
+  background-color: var(--basic-red);
+}
+
 .header__checkout {
   background-color: var(--basic-green);
 }
