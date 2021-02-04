@@ -88,12 +88,34 @@
 
 /* Global */
 
-body {
+.page-body {
+  min-width: 940px;
+  margin: 0;
+  padding: 0;
   font-family: "Cuprum", Arial, sans-serif;
   font-size: 18px;
   line-height: 24px;
   font-weight: 400;
   color: var(--basic-black);
+  min-height: 100%;
+  display: grid;
+  grid-template-rows: min-content 1fr min-content;
+  align-content: start;
+}
+
+h1, h2, h3 {
+  margin: 0;
+  padding: 0;
+}
+
+p {
+  margin: 0;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
 a {
@@ -110,6 +132,11 @@ img {
   line-height: 18px;
   color: var(--basic-white);
   background-color: var(--basic-red);
+}
+
+.popular-top {
+  background-color: var(--basic-beige);
+  margin-bottom: 20px;
 }
 
 .popular__title {
@@ -153,15 +180,46 @@ img {
   box-shadow: inset 0px -5px 0px var(--basic-black-transparent);
 }
 
+.container {
+  width: 940px;
+  margin: 0 auto;
+}
+
+/* Grid */
+
+.page {
+  height: 100%;
+}
+
+.index-columns>.container {
+  display: grid;
+  grid-template-columns: 1fr 300px;
+  margin-bottom: 70px;
+}
+
 /* Header */
 
 .header {
   background-color: var(--basic-grey-light);
+  margin-bottom: 60px;
+}
+
+.header-bar {
+  background-color: var(--basic-blue-dark);
+}
+
+.header-container {
+  width: 940px;
+  margin: 0 auto;
+  padding-top: 40px;
+  padding-bottom: 60px;
 }
 
 .header-top {
   background-color: var(--basic-blue-dark);
   color: var(--basic-white);
+  width: 940px;
+  margin: 0 auto;
 }
 
 .header-top a {
@@ -214,11 +272,13 @@ img {
 .header__login {
   background-color: var(--basic-white);
   font-size: 21px;
+  color: var(--basic-black);
 }
 
 .header__registration {
   background-color: var(--basic-white);
   font-size: 21px;
+  color: var(--basic-black);
 }
 
 .header-nav {
@@ -243,30 +303,51 @@ img {
 
 .advantages {
   color: var(--basic-white);
+  margin-bottom: 60px;
+}
+
+.advantages-content {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 123px 266px;
+  gap: 20px;
 }
 
 .advantages-list {
-  list-style: none;
+  grid-column: 1 / -1;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
 }
 
-.advantages-list:nth-of-type(1) .advantages-item:nth-of-type(1) {
+.advantages-slider {
+  grid-column: 1 / 3;
+}
+
+.advantages-item {
+  height: 123px;
+}
+
+.advantages-list .advantages-item:nth-of-type(1) {
   background-color: var(--advantages-yellow);
 }
 
-.advantages-list:nth-of-type(1) .advantages-item:nth-of-type(2) {
+.advantages-list .advantages-item:nth-of-type(2) {
   background-color: var(--advantages-blue-light);
 }
 
-.advantages-list:nth-of-type(1) .advantages-item:nth-of-type(3) {
+.advantages-list .advantages-item:nth-of-type(3) {
   background-color: var(--advantages-pink);
 }
 
-.advantages-list:nth-of-type(3) .advantages-item:nth-of-type(1) {
+.advantages-list .advantages-item:nth-of-type(4) {
   background-color: var(--advantages-green-light);
+  grid-column: 3 / 4;
 }
 
-.advantages-list:nth-of-type(3) .advantages-item:nth-of-type(2) {
+.advantages-list .advantages-item:nth-of-type(5) {
   background-color: var(--advantages-orange);
+  grid-column: 3 / 4;
 }
 
 .advantages-item__title {
@@ -292,9 +373,11 @@ img {
 
 .advantages-slide:nth-child(1) {
   background-image: url(../img/advantages/slider/1.jpg);
+  height: 266px;
 }
 
 .advantages-slide:nth-child(2) {
+  display: none;
   background-image: url(../img/advantages/slider/2.jpg);
 }
 
@@ -311,8 +394,14 @@ img {
 
 /* Goods */
 
+.goods {
+  margin-bottom: 70px;
+}
+
 .goods-list {
-  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  column-gap: 20px;
 }
 
 .goods-item {
@@ -352,10 +441,23 @@ img {
   background-color: var(--basic-red);
 }
 
+.goods-item__label {
+  font-size: 14px;
+  line-height: 18px;
+  color: var(--basic-white);
+  background-color: var(--basic-red);
+}
+
 /* Manufacturers */
 
+.manufacturers {
+  margin-bottom: 70px;
+}
+
 .manufacturers-list {
-  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
 }
 
 .manufacturers-item {
@@ -367,33 +469,39 @@ img {
 
 .services {
   background-color: var(--basic-background);
+  padding-top: 60px;
+  margin-bottom: 70px;
 }
 
-.tabs-caption {
-  list-style: none;
+.services-content {
+  display: grid;
+  grid-template-columns: 240px 1fr;
 }
 
-.tabs-caption__item {
-  background-color: var(--basic-blue-navy);
+.services__title {
+  grid-column: 1 / -1;
+  margin-bottom: 25px;
 }
 
-.tabs-caption__item_active {
-  background-color: var(--basic-white);
+.services__text {
+  grid-column: 1 / -1;
+  margin-bottom: 20px;
 }
 
 .tabs-caption__item a {
+  display: inline-block;
+  width: 240px;
+  padding: 14px 0 17px 22px;
+  background-color: var(--basic-blue-navy);
   font-size: 21px;
   line-height: 30px;
   color: var(--basic-white);
   font-weight: 700;
 }
 
-.tabs-caption__item_active a {
+.tabs-caption__item--active a {
+  background-color: var(--basic-white);
   color: var(--basic-blue-navy);
-}
-
-.tabs-content {
-  list-style: none;
 }
 
 .tabs-content__title {
@@ -411,6 +519,7 @@ img {
 
 .tabs-content__item {
   background-repeat: no-repeat;
+  margin-left: 80px;
 }
 
 .tabs-content__item:nth-child(1) {
@@ -418,27 +527,49 @@ img {
 }
 
 .tabs-content__item:nth-child(2) {
+  display: none;
   background-image: url(../img/services/guarantee.png);
 }
 
 .tabs-content__item:nth-child(3) {
+  display: none;
   background-image: url(../img/services/credit.png);
 }
 
 /* About */
 
-.about-list {
-  list-style: none;
+.about__title {
+  margin-bottom: 25px;
+}
+
+/* Contacts */
+
+.contacts__title {
+  margin-bottom: 25px;
+}
+
+.contacts__text {
+  margin-bottom: 30px;
 }
 
 /* Footer */
 
-.footer div:nth-child(1) {
+.footer-content:nth-child(1) {
   background-color: var(--basic-blue-navy);
 }
 
-.footer div:nth-child(2) {
+.footer-content:nth-child(1) > .container {
+  display: grid;
+  grid-template-columns: 325px 1fr;
+}
+
+.footer-content:nth-child(2) {
   background-color: var(--basic-blue-dark);
+}
+
+.footer-content:nth-child(2) > .container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
 }
 
 .footer__info {
@@ -447,10 +578,6 @@ img {
 
 .footer__info a {
   color: inherit;
-}
-
-.footer-list {
-  list-style: none;
 }
 
 .footer-list:nth-of-type(1) .footer-list__item a {
@@ -468,7 +595,8 @@ img {
 }
 
 .footer-socials {
-  list-style: none;
+  width: 135px;
+  margin: 0 auto;
 }
 
 .footer-socials__item {
@@ -496,6 +624,10 @@ img {
 }
 
 /* Modal */
+
+.modal {
+  display: none;
+}
 
 .modal-close {
   background: none;
