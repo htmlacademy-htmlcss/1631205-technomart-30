@@ -425,7 +425,6 @@ img {
 .goods-item {
   border: 1px solid var(--basic-grey-light);
   background-color: var(--basic-white);
-  
 }
 
 .goods-item__label {
