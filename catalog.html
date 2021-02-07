@@ -15,11 +15,15 @@
     <header class="header catalog-header">
       <div class="header-bar">
         <div class="header-top">
-          <a class="logo header__logo" href=""><img src="img/logo.svg" alt="ТЕХНОМАРТ"></a>
-          <form class="header-form" action="#"><input type="text" placeholder="Поиск:"></form>
-          <a class="header__bookmarks" href="">Закладки: 0</a>
-          <a class="header__cart header__cart--active" href="">Корзина: 10</a>
-          <a class="header__checkout" href="">Оформить заказ</a>
+          <div>
+            <a class="logo header__logo" href=""><img src="img/logo.svg" alt="ТЕХНОМАРТ"></a>
+            <form class="header-form" action="#"><input type="text" placeholder="Поиск:"></form>
+          </div>
+          <div>
+            <a class="header__bookmarks" href="">Закладки: 0</a>
+            <a class="header__cart header__cart--active" href="">Корзина: 10</a>
+            <a class="header__checkout" href="">Оформить заказ</a>
+          </div>
         </div>
       </div>
       <div class="header-container">
@@ -80,7 +84,9 @@
                   <fieldset class="filter-block">
                     <legend class="filter-block__caption">Цена:</legend>
                     <input type="range" min="0" max="30000">
-                    <input type="number" name="price-min" value="0"> — <input type="number" name="price-max" value="30000">
+                    <div class="filter-block__range">
+                      <input type="number" name="price-min" value="0"> <span>—</span> <input type="number" name="price-max" value="30000">
+                    </div>
                   </fieldset>
                   <fieldset class="filter-block">
                       <legend class="filter-block__caption">Производители:</legend>
@@ -120,13 +126,15 @@
             <section>
                 <div class="sorting">
                   <h2 class="sorting__title">Сортировка:</h2>
-                  <ul class="sorting-list">
-                    <li class="sorting-list__item sorting-list__item--active"><a href="">По цене</a></li>
-                    <li class="sorting-list__item"><a href="">По типу</a></li>
-                    <li class="sorting-list__item"><a href="">По функционалу</a></li>
-                  </ul>
-                  <button class="sorting-button sorting-button--up" type="button">Вверх</button>
-                  <button class="sorting-button sorting-button--down" type="button">Вниз</button>
+                  <div class="sorting-controls">
+                    <ul class="sorting-list">
+                      <li class="sorting-list__item sorting-list__item--active"><a href="">По цене</a></li>
+                      <li class="sorting-list__item"><a href="">По типу</a></li>
+                      <li class="sorting-list__item"><a href="">По функционалу</a></li>
+                    </ul>
+                    <button class="sorting-button sorting-button--up" type="button">↑</button>
+                    <button class="sorting-button sorting-button--down" type="button">↓</button>
+                  </div>
                 </div>
                 <ul class="goods-list">
                   <li class="goods-item">
@@ -256,7 +264,7 @@
               <a href="tel:+78125550555">+7 (812) 555-05-55</a>
             </p>
           </div>
-          <div>
+          <div class="footer-menu">
             <ul class="footer-list">
               <li class="footer-list__item"><a href="">Компания</a></li>
               <li class="footer-list__item"><a href="">Новости</a></li>
