@@ -1402,11 +1402,11 @@ img {
   margin-right: 20px;
 }
 
-.header__username:hover svg path {
+.header__username:hover svg {
   fill: var(--basic-grey);
 }
 
-.header__username:active svg path {
+.header__username:active svg {
   fill: var(--input-grey);
 }
 
