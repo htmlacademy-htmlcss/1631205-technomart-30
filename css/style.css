@@ -140,6 +140,7 @@ img {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  flex-wrap: wrap;
   padding: 25px 14px 25px 28px;
 }
 
@@ -278,6 +279,7 @@ img {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
+  flex-wrap: wrap;
 }
 
 .header-top {
@@ -287,11 +289,7 @@ img {
   margin: 0 auto;
   display: flex;
   align-items: center;
-}
-
-.header-top div {
-  display: flex;
-  align-items: center;
+  flex-wrap: wrap;
 }
 
 .header-top a {
@@ -418,6 +416,7 @@ img {
 
 .header__cart--active {
   background-color: var(--basic-red);
+  padding: 14px 21px 14px 49px;
 }
 
 .header__checkout {
@@ -533,6 +532,7 @@ img {
   padding: 0;
   display: flex;
   justify-content: center;
+  flex-wrap: wrap;
 }
 
 .header-list__item a {
@@ -1161,10 +1161,12 @@ img {
 .footer-content--navy > .container {
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
 }
 
 .footer-content--dark {
   background-color: var(--basic-blue-dark);
+  padding: 34px 0 29px 0;
 }
 
 .footer-content--dark > .container {
@@ -1248,11 +1250,13 @@ img {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  flex-wrap: wrap;
 }
 
 .footer-socials__item {
   background: linear-gradient(0deg, var(--basic-blue-dark-extra), var(--basic-blue-dark-extra));
   border-radius: 50%;
+  margin-bottom: 10px;
 }
 
 .footer-socials__item:hover {
@@ -1317,14 +1321,70 @@ img {
 
 .modal {
   display: none;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  box-shadow: 0 30px 50px rgba(0, 0, 0, 0.7);
+}
+
+.modal::before {
+  content: '';
+  position: absolute;
+  top: -7px;
+  left: 0;
+  width: 100%;
+  height: 7px;
+  background-color: var(--basic-red);
 }
 
 .modal-close {
   background: none;
   border: none;
+  position: absolute;
+  top: 14px;
+  right: 11px;
+  cursor: pointer;
 }
 
 /* Modal letter */
+
+.modal-letter {
+  top: 50%;
+  transform: translateY(-50%);
+  bottom: auto;
+  width: 620px;
+  box-sizing: border-box;
+}
+
+.letter-form {
+  background-color: var(--basic-white);
+}
+
+.letter-form__items {
+  width: 460px;
+  margin: 0 auto;
+  padding-top: 39px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 20px;
+  row-gap: 13px;
+}
+
+.letter-form__item {
+  margin: 0;
+}
+
+.letter-form__item:nth-child(3) {
+  grid-column: 1 / -1;
+}
+
+.letter-form__item label {
+  display: block;
+  margin-bottom: 11px;
+}
 
 .letter-form__input {
   font-family: 'PT Sans', Arial, sans-serif;
@@ -1332,6 +1392,9 @@ img {
   line-height: 24px;
   border: 2px solid var(--input-grey);
   border-radius: 2px;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 6px 12px;
 }
 
 .letter-form__input::placeholder {
@@ -1344,6 +1407,10 @@ img {
   line-height: 24px;
   border: 2px solid var(--input-grey);
   border-radius: 2px;
+  width: 100%;
+  height: 114px;
+  box-sizing: border-box;
+  padding: 6px 12px;
 }
 
 .letter-form__textarea::placeholder {
@@ -1352,10 +1419,24 @@ img {
 
 .letter-form__button {
   background-color: var(--basic-beige-light);
+  padding: 37px 80px;
+  margin-top: 37px;
 }
 
 .letter-form__button button {
   border: none;
+  display: block;
+  width: 460px;
+  margin: 0 auto;
+  padding: 10px 0;
+  cursor: pointer;
+}
+
+/* Modal map */
+
+.modal-map {
+  width: 940px;
+  height: 450px;
 }
 
 /* Catalog */
@@ -1402,11 +1483,11 @@ img {
   margin-right: 20px;
 }
 
-.header__username:hover svg path {
+.header__username:hover svg {
   fill: var(--basic-grey);
 }
 
-.header__username:active svg path {
+.header__username:active svg {
   fill: var(--input-grey);
 }
 
@@ -1476,6 +1557,7 @@ img {
   padding: 0;
   margin-bottom: 20px;
   display: flex;
+  flex-wrap: wrap;
 }
 
 .breadcrumbs-list__item {
@@ -1766,10 +1848,12 @@ img {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  flex-wrap: wrap;
 }
 
 .sorting-controls {
   display: flex;
+  flex-wrap: wrap;
 }
 
 .sorting__title {
@@ -1886,6 +1970,7 @@ img {
   padding: 0;
   margin-top: 50px;
   display: flex;
+  flex-wrap: wrap;
 }
 
 .pagination-list__item {
@@ -1893,6 +1978,7 @@ img {
   font-size: 13px;
   line-height: 18px;
   margin-right: 10px;
+  margin-bottom: 10px;
 }
 
 .pagination-list__item--active {
