@@ -846,6 +846,14 @@ img {
   display: none;
 }
 
+.goods-item:focus .goods-item__controls {
+  display: flex;
+}
+
+.goods-item:focus img {
+  display: none;
+}
+
 .goods-item__controls {
   display: flex;
   flex-direction: column;
@@ -884,6 +892,7 @@ img {
   font-weight: 700;
   text-align: center;
   margin-bottom: 8px;
+  color: var(--basic-black);
 }
 
 .goods-item__price {
