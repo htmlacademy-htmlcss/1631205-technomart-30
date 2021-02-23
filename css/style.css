@@ -606,10 +606,7 @@ img {
 
 .advantages-item {
   height: 123px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 20px 43px 21px 23px;
+  padding: 20px 0 21px 23px;
   box-sizing: border-box;
   position: relative;
   overflow: hidden;
@@ -637,10 +634,54 @@ img {
   grid-column: 3 / 4;
 }
 
-.advantages-item > div {
+.advantages-item__inner {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+  position: relative;
+}
+
+.advantages-item__inner::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 0;
+}
+
+.advantages-item:nth-child(1) .advantages-item__inner::after {
+  right: 43px;
+  width: 44px;
+  height: 65px;
+  background-image: url(../img/advantages/materials.svg);
+}
+
+.advantages-item:nth-child(2) .advantages-item__inner::after {
+  right: 31px;
+  width: 75px;
+  height: 61px;
+  background-image: url(../img/advantages/tool.svg);
+}
+
+.advantages-item:nth-child(3) .advantages-item__inner::after {
+  right: 31px;
+  width: 78px;
+  height: 62px;
+  background-image: url(../img/advantages/technics.svg);
+}
+
+.advantages-item:nth-child(4) .advantages-item__inner::after {
+  right: 45px;
+  width: 59px;
+  height: 72px;
+  background-image: url(../img/advantages/discounts.svg);
+}
+
+.advantages-item:nth-child(5) .advantages-item__inner::after {
+  right: 31px;
+  width: 78px;
+  height: 63px;
+  background-image: url(../img/advantages/delivery.svg);
 }
 
 .advantages-item__title {
@@ -652,7 +693,9 @@ img {
 
 .advantages-item__link {
   background-color: var(--basic-gray-transparent);
-  padding: 10px 20px;
+  width: 135px;
+  padding: 10px 0;
+  text-align: center;
 }
 
 .advantages-item__link:hover {
@@ -1280,6 +1323,20 @@ img {
   align-items: center;
   width: 44px;
   height: 44px;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+.footer-socials__item:nth-child(1) a {
+  background-image: url(../img/icons/vk.svg);
+}
+
+.footer-socials__item:nth-child(2) a {
+  background-image: url(../img/icons/fb.svg);
+}
+
+.footer-socials__item:nth-child(3) a {
+  background-image: url(../img/icons/insta.svg);
 }
 
 .footer-content--dark > .container div {
