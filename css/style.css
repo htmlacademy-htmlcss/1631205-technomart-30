@@ -889,11 +889,11 @@ img {
   display: none;
 }
 
-.goods-item:focus .goods-item__controls {
+.goods-item:focus-within .goods-item__controls {
   display: flex;
 }
 
-.goods-item:focus img {
+.goods-item:focus-within img {
   display: none;
 }
 
