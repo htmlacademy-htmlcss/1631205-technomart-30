@@ -1408,6 +1408,11 @@ img {
   background-color: var(--basic-red);
 }
 
+.modal-show {
+  display: block;
+  animation: bounce 0.6s;
+}
+
 .modal-close {
   background: none;
   border: none;
@@ -1420,8 +1425,7 @@ img {
 /* Modal letter */
 
 .modal-letter {
-  top: 50%;
-  transform: translateY(-50%);
+  top: 200px;
   bottom: auto;
   width: 620px;
   box-sizing: border-box;
@@ -2162,8 +2166,7 @@ img {
 /* Modal-success */
 
 .modal-success {
-  top: 50%;
-  transform: translateY(-50%);
+  top: 200px;
   bottom: auto;
   width: 620px;
   box-sizing: border-box;
@@ -2229,4 +2232,24 @@ img {
 
 .modal-success__button:active {
   background-color: var(--basic-white);
+}
+
+/* Animations */
+
+@keyframes bounce {
+  0% {
+    transform: translateY(-2000px) scale(0);
+  }
+
+  70% {
+    transform: translateY(30px);
+  }
+
+  90% {
+    transform: translateY(-10px);
+  }
+
+  100% {
+    transform: translateY(0) scale(1);
+  }
 }
