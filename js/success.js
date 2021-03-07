@@ -1,7 +1,7 @@
 const success = document.querySelector('.modal-success');
 const successOpenButton = document.querySelectorAll('.buy');
-const successCloseButton = document.querySelector('.modal-close');
-const successContinueButton = document.querySelector('.modal-success__button');
+const successCloseButton = success.querySelector('.modal-close');
+const successContinueButton = success.querySelector('.modal-success__button');
 
 for (let i = 0; i < successOpenButton.length; i++) {
   successOpenButton[i].addEventListener('click', function(e) {

@@ -1,7 +1,7 @@
 const letter = document.querySelector('.modal-letter');
 const letterOpenButton = document.querySelector('.contacts__link');
-const letterCloseButton = document.querySelector('.modal-close');
-const letterInputName = document.querySelector('.letter-form__input--name');
+const letterCloseButton = letter.querySelector('.modal-close');
+const letterInputName = letter.querySelector('.letter-form__input--name');
 
 letterOpenButton.addEventListener('click', function(e) {
   e.preventDefault();
