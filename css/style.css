@@ -109,6 +109,7 @@
   display: grid;
   grid-template-rows: min-content 1fr min-content;
   align-content: start;
+  position: relative;
 }
 
 a {
@@ -358,6 +359,8 @@ img {
   padding: 14px 24px 14px 43px;
   position: relative;
   white-space: nowrap;
+  width: 150px;
+  box-sizing: border-box;
 }
 
 .header__bookmarks::before {
@@ -389,6 +392,8 @@ img {
   padding: 14px 26px 14px 49px;
   position: relative;
   white-space: nowrap;
+  width: 150px;
+  box-sizing: border-box;
 }
 
 .header__cart::before {
@@ -418,13 +423,14 @@ img {
 
 .header__cart--active {
   background-color: var(--basic-red);
-  padding: 14px 21px 14px 49px;
 }
 
 .header__checkout {
   background-color: var(--basic-green);
   padding: 14px 18px;
   white-space: nowrap;
+  width: 150px;
+  box-sizing: border-box;
 }
 
 .header__checkout:hover {
@@ -726,6 +732,7 @@ img {
   background-color: var(--basic-black-transparent);
   display: none;
   position: relative;
+  height: 266px;
 }
 
 .advantages-slide__top {
@@ -744,7 +751,6 @@ img {
 
 .advantages-slide:nth-child(1) {
   background-image: url(../img/advantages/slider/1.jpg);
-  height: 266px;
 }
 
 .advantages-slide:nth-child(2) {
@@ -833,7 +839,7 @@ img {
   cursor: pointer;
 }
 
-.advantages-pagination__item:not(.advantages-pagination__item--active) button::after {
+.advantages-pagination__item--active button::after {
   content: '';
   position: absolute;
   top: 50%;
@@ -1118,6 +1124,8 @@ img {
   display: none;
   padding-left: 80px;
   padding-bottom: 130px;
+  height: 283px;
+  box-sizing: border-box;
 }
 
 .tabs-content__item--active {
@@ -1387,6 +1395,23 @@ img {
 
 /* Modal */
 
+.blackout {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transition: 0.3s;
+  opacity: 0;
+  z-index: -1;
+}
+
+.blackout.active {
+  opacity: 1;
+  z-index: 1;
+  background-color: var(--basic-black-transparent);
+}
+
 .modal {
   display: none;
   position: fixed;
@@ -1396,6 +1421,7 @@ img {
   left: 0;
   margin: auto;
   box-shadow: 0 30px 50px rgba(0, 0, 0, 0.7);
+  z-index: 1;
 }
 
 .modal::before {
@@ -1531,6 +1557,10 @@ img {
 
 .catalog-header {
   margin-bottom: 20px;
+}
+
+.catalog-header .header__cart {
+  padding-right: 21px;
 }
 
 .catalog-header .header-controls {
@@ -2238,7 +2268,7 @@ img {
 
 @keyframes bounce {
   0% {
-    transform: translateY(-2000px) scale(0);
+    transform: translateY(-2000px);
   }
 
   70% {
@@ -2250,6 +2280,6 @@ img {
   }
 
   100% {
-    transform: translateY(0) scale(1);
+    transform: translateY(0);
   }
 }
