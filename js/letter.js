@@ -18,13 +18,13 @@ letterCloseButton.addEventListener('click', function(e) {
   letter.classList.remove('modal-show');
 });
 
-window.addEventListener("keydown", function (e) {
+window.addEventListener('keydown', function (e) {
   if (e.keyCode === 27) {
-    if (letter.classList.contains("modal-show")) {
+    if (letter.classList.contains('modal-show')) {
       e.preventDefault();
       blackout.classList.remove('active');
 
-      letter.classList.remove("modal-show");
+      letter.classList.remove('modal-show');
     }
   }
 });
