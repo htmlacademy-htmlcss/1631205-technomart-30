@@ -1,28 +1,28 @@
-const map = document.querySelector(".modal-map");
-const mapOpenButton = document.querySelector(".contacts__map");
-const mapCloseButton = map.querySelector(".modal-close");
+const map = document.querySelector('.modal-map');
+const mapOpenButton = document.querySelector('.contacts__map');
+const mapCloseButton = map.querySelector('.modal-close');
 // const blackout = document.querySelector('.blackout');
 
-mapOpenButton.addEventListener("click", function (e) {
+mapOpenButton.addEventListener('click', function (e) {
   e.preventDefault();
   blackout.classList.add('active');
 
-  map.classList.add("modal-show");
+  map.classList.add('modal-show');
 });
 
-mapCloseButton.addEventListener("click", function (e) {
+mapCloseButton.addEventListener('click', function (e) {
   blackout.classList.remove('active');
 
-  map.classList.remove("modal-show");
+  map.classList.remove('modal-show');
 });
 
-window.addEventListener("keydown", function (e) {
+window.addEventListener('keydown', function (e) {
   if (e.keyCode === 27) {
-    if (map.classList.contains("modal-show")) {
+    if (map.classList.contains('modal-show')) {
       e.preventDefault();
       blackout.classList.remove('active');
 
-      map.classList.remove("modal-show");
+      map.classList.remove('modal-show');
     }
   }
 });

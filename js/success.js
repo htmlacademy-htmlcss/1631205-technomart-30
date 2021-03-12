@@ -36,13 +36,13 @@ successContinueButton.addEventListener('click', function(e) {
   success.classList.remove('modal-show');
 });
 
-window.addEventListener("keydown", function (e) {
+window.addEventListener('keydown', function (e) {
   if (e.keyCode === 27) {
-    if (success.classList.contains("modal-show")) {
+    if (success.classList.contains('modal-show')) {
       e.preventDefault();
       blackout.classList.remove('active');
 
-      success.classList.remove("modal-show");
+      success.classList.remove('modal-show');
     }
   }
 });
