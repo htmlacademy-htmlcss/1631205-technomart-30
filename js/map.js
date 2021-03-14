@@ -1,7 +1,6 @@
 const map = document.querySelector('.modal-map');
 const mapOpenButton = document.querySelector('.contacts__map');
 const mapCloseButton = map.querySelector('.modal-close');
-// const blackout = document.querySelector('.blackout');
 
 mapOpenButton.addEventListener('click', function (e) {
   e.preventDefault();
